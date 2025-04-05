@@ -1,0 +1,1145 @@
+2025-04-05T11:31:27.627+02:00 TRACE 41552 --- [           main] o.s.kafka.core.KafkaTemplate             : Sending: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=e0810bec-968f-41f9-adc4-92207aacb36b, value=1, timestamp=null)
+2025-04-05T11:31:27.628+02:00 TRACE 41552 --- [           main] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@b75f3f4] send(ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=e0810bec-968f-41f9-adc4-92207aacb36b, value=1, timestamp=null))
+2025-04-05T11:31:27.628+02:00 TRACE 41552 --- [           main] o.s.kafka.core.KafkaTemplate             : Sent: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = true), key=e0810bec-968f-41f9-adc4-92207aacb36b, value=1, timestamp=null)
+2025-04-05T11:31:27.636+02:00 TRACE 41552 --- [ad | producer-1] o.s.kafka.core.KafkaTemplate             : Sent ok: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = true), key=e0810bec-968f-41f9-adc4-92207aacb36b, value=1, timestamp=null), metadata: test-0@2
+2025-04-05T11:31:27.636+02:00 TRACE 41552 --- [ad | producer-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@b75f3f4] close(PT5S)
+2025-04-05T11:31:27.638+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Received: 1 records
+2025-04-05T11:31:27.638+02:00 TRACE 41552 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : [test-0@2]
+2025-04-05T11:31:27.638+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] l.a.BatchMessagingMessageListenerAdapter : Processing [GenericMessage [payload=[1], headers={kafka_offset=[2], kafka_conversionFailures=[], kafka_consumer=org.springframework.kafka.core.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer@2573593d, kafka_timestampType=[CREATE_TIME], kafka_receivedPartitionId=[0], kafka_receivedMessageKey=[e0810bec-968f-41f9-adc4-92207aacb36b], kafka_batchConvertedHeaders=[{}], kafka_receivedTopic=[test], kafka_receivedTimestamp=[1743845487628], kafka_groupId=test}]]
+2025-04-05T11:31:27.638+02:00  INFO 41552 --- [ntainer#0-0-C-1] i.r.t.MyListener                         : Received: [1]
+2025-04-05T11:31:27.639+02:00 TRACE 41552 --- [ntainer#0-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [it.riccardoforzan.transactioninkafkalistener.MyService.transactionalBulkSave]
+2025-04-05T11:31:27.641+02:00 TRACE 41552 --- [ntainer#0-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [it.riccardoforzan.transactioninkafkalistener.MyService.transactionalBulkSave]
+2025-04-05T11:31:27.643+02:00 TRACE 41552 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Ack: test-0@2
+2025-04-05T11:31:27.643+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Commit list: {test-0=OffsetAndMetadata{offset=3, leaderEpoch=null, metadata=''}}
+2025-04-05T11:31:27.643+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Committing: {test-0=OffsetAndMetadata{offset=3, leaderEpoch=null, metadata=''}}
+2025-04-05T11:31:27.646+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Commit list: {}
+2025-04-05T11:31:27.736+02:00 TRACE 41552 --- [           main] o.s.kafka.core.KafkaTemplate             : Sending: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=ef8db747-bc92-422a-afde-2ab1fcf17024, value=1, timestamp=null)
+2025-04-05T11:31:27.736+02:00 TRACE 41552 --- [           main] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@b75f3f4] send(ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=ef8db747-bc92-422a-afde-2ab1fcf17024, value=1, timestamp=null))
+2025-04-05T11:31:27.737+02:00 TRACE 41552 --- [           main] o.s.kafka.core.KafkaTemplate             : Sent: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = true), key=ef8db747-bc92-422a-afde-2ab1fcf17024, value=1, timestamp=null)
+2025-04-05T11:31:27.737+02:00 TRACE 41552 --- [           main] o.s.kafka.core.KafkaTemplate             : Sending: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=eb0ea8a0-3056-4cb2-82b9-264dc2329f28, value=2, timestamp=null)
+2025-04-05T11:31:27.737+02:00 TRACE 41552 --- [           main] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@b75f3f4] send(ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=eb0ea8a0-3056-4cb2-82b9-264dc2329f28, value=2, timestamp=null))
+2025-04-05T11:31:27.737+02:00 TRACE 41552 --- [           main] o.s.kafka.core.KafkaTemplate             : Sent: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = true), key=eb0ea8a0-3056-4cb2-82b9-264dc2329f28, value=2, timestamp=null)
+2025-04-05T11:31:27.741+02:00 TRACE 41552 --- [ad | producer-1] o.s.kafka.core.KafkaTemplate             : Sent ok: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = true), key=ef8db747-bc92-422a-afde-2ab1fcf17024, value=1, timestamp=null), metadata: test-0@3
+2025-04-05T11:31:27.741+02:00 TRACE 41552 --- [ad | producer-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@b75f3f4] close(PT5S)
+2025-04-05T11:31:27.741+02:00 TRACE 41552 --- [ad | producer-1] o.s.kafka.core.KafkaTemplate             : Sent ok: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = true), key=eb0ea8a0-3056-4cb2-82b9-264dc2329f28, value=2, timestamp=null), metadata: test-0@4
+2025-04-05T11:31:27.741+02:00 TRACE 41552 --- [ad | producer-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@b75f3f4] close(PT5S)
+2025-04-05T11:31:27.742+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Received: 2 records
+2025-04-05T11:31:27.742+02:00 TRACE 41552 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : [test-0@3, test-0@4]
+2025-04-05T11:31:27.742+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] l.a.BatchMessagingMessageListenerAdapter : Processing [GenericMessage [payload=[1, 2], headers={kafka_offset=[3, 4], kafka_conversionFailures=[], kafka_consumer=org.springframework.kafka.core.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer@2573593d, kafka_timestampType=[CREATE_TIME, CREATE_TIME], kafka_receivedPartitionId=[0, 0], kafka_receivedMessageKey=[ef8db747-bc92-422a-afde-2ab1fcf17024, eb0ea8a0-3056-4cb2-82b9-264dc2329f28], kafka_batchConvertedHeaders=[{}, {}], kafka_receivedTopic=[test, test], kafka_receivedTimestamp=[1743845487736, 1743845487737], kafka_groupId=test}]]
+2025-04-05T11:31:27.742+02:00  INFO 41552 --- [ntainer#0-0-C-1] i.r.t.MyListener                         : Received: [1, 2]
+2025-04-05T11:31:27.742+02:00 TRACE 41552 --- [ntainer#0-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [it.riccardoforzan.transactioninkafkalistener.MyService.transactionalBulkSave]
+2025-04-05T11:31:27.745+02:00 ERROR 41552 --- [ntainer#0-0-C-1] i.r.t.MyService                          : Bulk write operation error on server localhost:50859. Write errors: [BulkWriteError{index=0, code=11000, message='E11000 duplicate key error collection: test.myDocument index: value dup key: { value: "1" }', details={}}].
+2025-04-05T11:31:27.746+02:00  INFO 41552 --- [ntainer#0-0-C-1] i.r.t.MyService                          : saved [MyDocument[id=67f0f86f3abbd823e4cbb596, value=2]]
+2025-04-05T11:31:27.746+02:00 TRACE 41552 --- [ntainer#0-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [it.riccardoforzan.transactioninkafkalistener.MyService.transactionalBulkSave]
+2025-04-05T11:31:27.751+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] o.s.kafka.listener.DefaultErrorHandler   : Expected a BatchListenerFailedException; re-delivering full batch
+
+org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'public void it.riccardoforzan.transactioninkafkalistener.MyListener.listen(java.util.List<java.lang.String>)' threw exception
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2994) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2473) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchOnMessageWithRecordsOrList(KafkaMessageListenerContainer.java:2440) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchOnMessage(KafkaMessageListenerContainer.java:2377) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchListener(KafkaMessageListenerContainer.java:2257) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchListener(KafkaMessageListenerContainer.java:2170) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2149) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1528) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1466) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1335) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run$$$capture(CompletableFuture.java:1804) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+	Suppressed: org.springframework.kafka.listener.ListenerExecutionFailedException: Restored Stack Trace
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:489) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:421) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:168) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:60) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2459) ~[spring-kafka-3.3.4.jar:3.3.4]
+Caused by: org.springframework.transaction.TransactionSystemException: Could not commit Mongo transaction for session [ClientSessionImpl@64b734a4 id = {"id": {"$binary": {"base64": "IaaZzOUlTcW/HpUKQPICDQ==", "subType": "04"}}}, causallyConsistent = true, txActive = false, txNumber = 3, closed = false, clusterTime = {"clusterTime": {"$timestamp": {"t": 1743845487, "i": 4}}, "signature": {"hash": {"$binary": {"base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=", "subType": "00"}}, "keyId": 0}}].
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:197) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:795) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:758) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:698) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:416) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.5.jar:6.2.5]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727) ~[spring-aop-6.2.5.jar:6.2.5]
+	at it.riccardoforzan.transactioninkafkalistener.MyService$$SpringCGLIB$$0.transactionalBulkSave(<generated>) ~[classes/:na]
+	at it.riccardoforzan.transactioninkafkalistener.MyListener.listen(MyListener.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169) ~[spring-messaging-6.2.5.jar:6.2.5]
+	at org.springframework.kafka.listener.adapter.KotlinAwareInvocableHandlerMethod.doInvoke(KotlinAwareInvocableHandlerMethod.java:45) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119) ~[spring-messaging-6.2.5.jar:6.2.5]
+	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:78) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:467) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:421) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:168) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:60) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2459) ~[spring-kafka-3.3.4.jar:3.3.4]
+	... 11 common frames omitted
+Caused by: com.mongodb.MongoCommandException: Command failed with error 251 (NoSuchTransaction): 'Transaction with { txnNumber: 3 } has been aborted.' on server localhost:50859. The full response is {"errorLabels": ["TransientTransactionError"], "ok": 0.0, "errmsg": "Transaction with { txnNumber: 3 } has been aborted.", "code": 251, "codeName": "NoSuchTransaction", "$clusterTime": {"clusterTime": {"$timestamp": {"t": 1743845487, "i": 4}}, "signature": {"hash": {"$binary": {"base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=", "subType": "00"}}, "keyId": 0}}, "operationTime": {"$timestamp": {"t": 1743845487, "i": 4}}}
+	at com.mongodb.internal.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:210) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:520) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceiveInternal(InternalStreamConnection.java:448) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.lambda$sendAndReceive$0(InternalStreamConnection.java:375) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:378) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection.sendAndReceive(UsageTrackingInternalConnection.java:111) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.sendAndReceive(DefaultConnectionPool.java:748) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.CommandProtocolImpl.execute(CommandProtocolImpl.java:68) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServer$DefaultServerProtocolExecutor.execute(DefaultServer.java:208) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.executeProtocol(DefaultServerConnection.java:113) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:82) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:73) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServer$OperationCountTrackingConnection.command(DefaultServer.java:298) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$executeRetryableWrite$10(SyncOperationHelper.java:267) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$withSourceAndConnection$0(SyncOperationHelper.java:131) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:156) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$withSourceAndConnection$1(SyncOperationHelper.java:130) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:156) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSourceAndConnection(SyncOperationHelper.java:129) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$executeRetryableWrite$11(SyncOperationHelper.java:252) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$decorateWriteWithRetries$12(SyncOperationHelper.java:308) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:67) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.executeRetryableWrite(SyncOperationHelper.java:279) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.TransactionOperation.execute(TransactionOperation.java:60) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.CommitTransactionOperation.execute(CommitTransactionOperation.java:69) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.CommitTransactionOperation.execute(CommitTransactionOperation.java:48) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.client.internal.MongoClusterImpl$OperationExecutorImpl.execute(MongoClusterImpl.java:379) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionImpl.commitTransaction(ClientSessionImpl.java:203) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionImpl.commitTransaction(ClientSessionImpl.java:111) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at org.springframework.data.mongodb.MongoTransactionManager$MongoTransactionObject.commitTransaction(MongoTransactionManager.java:443) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:230) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:194) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	... 31 common frames omitted
+
+2025-04-05T11:31:27.766+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] l.a.BatchMessagingMessageListenerAdapter : Processing [GenericMessage [payload=[1, 2], headers={kafka_offset=[3, 4], kafka_conversionFailures=[], kafka_consumer=org.springframework.kafka.core.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer@2573593d, kafka_timestampType=[CREATE_TIME, CREATE_TIME], kafka_receivedPartitionId=[0, 0], kafka_receivedMessageKey=[ef8db747-bc92-422a-afde-2ab1fcf17024, eb0ea8a0-3056-4cb2-82b9-264dc2329f28], kafka_batchConvertedHeaders=[{}, {}], kafka_receivedTopic=[test, test], kafka_receivedTimestamp=[1743845487736, 1743845487737], kafka_groupId=test}]]
+2025-04-05T11:31:27.766+02:00  INFO 41552 --- [ntainer#0-0-C-1] i.r.t.MyListener                         : Received: [1, 2]
+2025-04-05T11:31:27.766+02:00 TRACE 41552 --- [ntainer#0-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [it.riccardoforzan.transactioninkafkalistener.MyService.transactionalBulkSave]
+2025-04-05T11:31:27.770+02:00 ERROR 41552 --- [ntainer#0-0-C-1] i.r.t.MyService                          : Bulk write operation error on server localhost:50859. Write errors: [BulkWriteError{index=0, code=11000, message='E11000 duplicate key error collection: test.myDocument index: value dup key: { value: "1" }', details={}}].
+2025-04-05T11:31:27.770+02:00  INFO 41552 --- [ntainer#0-0-C-1] i.r.t.MyService                          : saved [MyDocument[id=67f0f86f3abbd823e4cbb598, value=2]]
+2025-04-05T11:31:27.770+02:00 TRACE 41552 --- [ntainer#0-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [it.riccardoforzan.transactioninkafkalistener.MyService.transactionalBulkSave]
+2025-04-05T11:31:27.775+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] o.s.k.l.FallbackBatchErrorHandler        : Retry failed for: test-0@3,test-0@4
+
+org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'public void it.riccardoforzan.transactioninkafkalistener.MyListener.listen(java.util.List<java.lang.String>)' threw exception
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2994) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2473) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchOnMessageWithRecordsOrList(KafkaMessageListenerContainer.java:2440) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$invokeBatchErrorHandler$43(KafkaMessageListenerContainer.java:2485) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.ErrorHandlingUtils.retryBatch(ErrorHandlingUtils.java:143) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FallbackBatchErrorHandler.handleBatch(FallbackBatchErrorHandler.java:152) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.fallback(FailedBatchProcessor.java:195) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.handle(FailedBatchProcessor.java:166) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.doHandle(FailedBatchProcessor.java:157) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.DefaultErrorHandler.handleBatch(DefaultErrorHandler.java:176) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchErrorHandler(KafkaMessageListenerContainer.java:2483) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchListener(KafkaMessageListenerContainer.java:2274) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchListener(KafkaMessageListenerContainer.java:2170) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2149) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1528) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1466) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1335) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run$$$capture(CompletableFuture.java:1804) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+	Suppressed: org.springframework.kafka.listener.ListenerExecutionFailedException: Restored Stack Trace
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:489) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:421) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:168) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:60) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2459) ~[spring-kafka-3.3.4.jar:3.3.4]
+Caused by: org.springframework.transaction.TransactionSystemException: Could not commit Mongo transaction for session [ClientSessionImpl@47090fba id = {"id": {"$binary": {"base64": "IaaZzOUlTcW/HpUKQPICDQ==", "subType": "04"}}}, causallyConsistent = true, txActive = false, txNumber = 4, closed = false, clusterTime = {"clusterTime": {"$timestamp": {"t": 1743845487, "i": 5}}, "signature": {"hash": {"$binary": {"base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=", "subType": "00"}}, "keyId": 0}}].
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:197) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:795) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:758) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:698) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:416) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.5.jar:6.2.5]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727) ~[spring-aop-6.2.5.jar:6.2.5]
+	at it.riccardoforzan.transactioninkafkalistener.MyService$$SpringCGLIB$$0.transactionalBulkSave(<generated>) ~[classes/:na]
+	at it.riccardoforzan.transactioninkafkalistener.MyListener.listen(MyListener.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169) ~[spring-messaging-6.2.5.jar:6.2.5]
+	at org.springframework.kafka.listener.adapter.KotlinAwareInvocableHandlerMethod.doInvoke(KotlinAwareInvocableHandlerMethod.java:45) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119) ~[spring-messaging-6.2.5.jar:6.2.5]
+	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:78) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:467) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:421) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:168) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:60) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2459) ~[spring-kafka-3.3.4.jar:3.3.4]
+	... 18 common frames omitted
+Caused by: com.mongodb.MongoCommandException: Command failed with error 251 (NoSuchTransaction): 'Transaction with { txnNumber: 4 } has been aborted.' on server localhost:50859. The full response is {"errorLabels": ["TransientTransactionError"], "ok": 0.0, "errmsg": "Transaction with { txnNumber: 4 } has been aborted.", "code": 251, "codeName": "NoSuchTransaction", "$clusterTime": {"clusterTime": {"$timestamp": {"t": 1743845487, "i": 5}}, "signature": {"hash": {"$binary": {"base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=", "subType": "00"}}, "keyId": 0}}, "operationTime": {"$timestamp": {"t": 1743845487, "i": 5}}}
+	at com.mongodb.internal.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:210) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:520) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceiveInternal(InternalStreamConnection.java:448) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.lambda$sendAndReceive$0(InternalStreamConnection.java:375) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:378) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection.sendAndReceive(UsageTrackingInternalConnection.java:111) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.sendAndReceive(DefaultConnectionPool.java:748) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.CommandProtocolImpl.execute(CommandProtocolImpl.java:68) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServer$DefaultServerProtocolExecutor.execute(DefaultServer.java:208) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.executeProtocol(DefaultServerConnection.java:113) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:82) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:73) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServer$OperationCountTrackingConnection.command(DefaultServer.java:298) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$executeRetryableWrite$10(SyncOperationHelper.java:267) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$withSourceAndConnection$0(SyncOperationHelper.java:131) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:156) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$withSourceAndConnection$1(SyncOperationHelper.java:130) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:156) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSourceAndConnection(SyncOperationHelper.java:129) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$executeRetryableWrite$11(SyncOperationHelper.java:252) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$decorateWriteWithRetries$12(SyncOperationHelper.java:308) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:67) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.executeRetryableWrite(SyncOperationHelper.java:279) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.TransactionOperation.execute(TransactionOperation.java:60) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.CommitTransactionOperation.execute(CommitTransactionOperation.java:69) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.CommitTransactionOperation.execute(CommitTransactionOperation.java:48) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.client.internal.MongoClusterImpl$OperationExecutorImpl.execute(MongoClusterImpl.java:379) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionImpl.commitTransaction(ClientSessionImpl.java:203) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionImpl.commitTransaction(ClientSessionImpl.java:111) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at org.springframework.data.mongodb.MongoTransactionManager$MongoTransactionObject.commitTransaction(MongoTransactionManager.java:443) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:230) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:194) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	... 38 common frames omitted
+
+2025-04-05T11:31:27.788+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] l.a.BatchMessagingMessageListenerAdapter : Processing [GenericMessage [payload=[1, 2], headers={kafka_offset=[3, 4], kafka_conversionFailures=[], kafka_consumer=org.springframework.kafka.core.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer@2573593d, kafka_timestampType=[CREATE_TIME, CREATE_TIME], kafka_receivedPartitionId=[0, 0], kafka_receivedMessageKey=[ef8db747-bc92-422a-afde-2ab1fcf17024, eb0ea8a0-3056-4cb2-82b9-264dc2329f28], kafka_batchConvertedHeaders=[{}, {}], kafka_receivedTopic=[test, test], kafka_receivedTimestamp=[1743845487736, 1743845487737], kafka_groupId=test}]]
+2025-04-05T11:31:27.788+02:00  INFO 41552 --- [ntainer#0-0-C-1] i.r.t.MyListener                         : Received: [1, 2]
+2025-04-05T11:31:27.788+02:00 TRACE 41552 --- [ntainer#0-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [it.riccardoforzan.transactioninkafkalistener.MyService.transactionalBulkSave]
+2025-04-05T11:31:27.791+02:00 ERROR 41552 --- [ntainer#0-0-C-1] i.r.t.MyService                          : Bulk write operation error on server localhost:50859. Write errors: [BulkWriteError{index=0, code=11000, message='E11000 duplicate key error collection: test.myDocument index: value dup key: { value: "1" }', details={}}].
+2025-04-05T11:31:27.791+02:00  INFO 41552 --- [ntainer#0-0-C-1] i.r.t.MyService                          : saved [MyDocument[id=67f0f86f3abbd823e4cbb59a, value=2]]
+2025-04-05T11:31:27.791+02:00 TRACE 41552 --- [ntainer#0-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [it.riccardoforzan.transactioninkafkalistener.MyService.transactionalBulkSave]
+2025-04-05T11:31:27.794+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] o.s.k.l.FallbackBatchErrorHandler        : Retry failed for: test-0@3,test-0@4
+
+org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'public void it.riccardoforzan.transactioninkafkalistener.MyListener.listen(java.util.List<java.lang.String>)' threw exception
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2994) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2473) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchOnMessageWithRecordsOrList(KafkaMessageListenerContainer.java:2440) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$invokeBatchErrorHandler$43(KafkaMessageListenerContainer.java:2485) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.ErrorHandlingUtils.retryBatch(ErrorHandlingUtils.java:143) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FallbackBatchErrorHandler.handleBatch(FallbackBatchErrorHandler.java:152) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.fallback(FailedBatchProcessor.java:195) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.handle(FailedBatchProcessor.java:166) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.doHandle(FailedBatchProcessor.java:157) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.DefaultErrorHandler.handleBatch(DefaultErrorHandler.java:176) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchErrorHandler(KafkaMessageListenerContainer.java:2483) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchListener(KafkaMessageListenerContainer.java:2274) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchListener(KafkaMessageListenerContainer.java:2170) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2149) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1528) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1466) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1335) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run$$$capture(CompletableFuture.java:1804) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+	Suppressed: org.springframework.kafka.listener.ListenerExecutionFailedException: Restored Stack Trace
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:489) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:421) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:168) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:60) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2459) ~[spring-kafka-3.3.4.jar:3.3.4]
+Caused by: org.springframework.transaction.TransactionSystemException: Could not commit Mongo transaction for session [ClientSessionImpl@a37f56a id = {"id": {"$binary": {"base64": "IaaZzOUlTcW/HpUKQPICDQ==", "subType": "04"}}}, causallyConsistent = true, txActive = false, txNumber = 5, closed = false, clusterTime = {"clusterTime": {"$timestamp": {"t": 1743845487, "i": 6}}, "signature": {"hash": {"$binary": {"base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=", "subType": "00"}}, "keyId": 0}}].
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:197) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:795) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:758) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:698) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:416) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.5.jar:6.2.5]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727) ~[spring-aop-6.2.5.jar:6.2.5]
+	at it.riccardoforzan.transactioninkafkalistener.MyService$$SpringCGLIB$$0.transactionalBulkSave(<generated>) ~[classes/:na]
+	at it.riccardoforzan.transactioninkafkalistener.MyListener.listen(MyListener.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169) ~[spring-messaging-6.2.5.jar:6.2.5]
+	at org.springframework.kafka.listener.adapter.KotlinAwareInvocableHandlerMethod.doInvoke(KotlinAwareInvocableHandlerMethod.java:45) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119) ~[spring-messaging-6.2.5.jar:6.2.5]
+	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:78) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:467) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:421) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:168) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:60) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2459) ~[spring-kafka-3.3.4.jar:3.3.4]
+	... 18 common frames omitted
+Caused by: com.mongodb.MongoCommandException: Command failed with error 251 (NoSuchTransaction): 'Transaction with { txnNumber: 5 } has been aborted.' on server localhost:50859. The full response is {"errorLabels": ["TransientTransactionError"], "ok": 0.0, "errmsg": "Transaction with { txnNumber: 5 } has been aborted.", "code": 251, "codeName": "NoSuchTransaction", "$clusterTime": {"clusterTime": {"$timestamp": {"t": 1743845487, "i": 6}}, "signature": {"hash": {"$binary": {"base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=", "subType": "00"}}, "keyId": 0}}, "operationTime": {"$timestamp": {"t": 1743845487, "i": 6}}}
+	at com.mongodb.internal.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:210) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:520) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceiveInternal(InternalStreamConnection.java:448) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.lambda$sendAndReceive$0(InternalStreamConnection.java:375) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:378) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection.sendAndReceive(UsageTrackingInternalConnection.java:111) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.sendAndReceive(DefaultConnectionPool.java:748) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.CommandProtocolImpl.execute(CommandProtocolImpl.java:68) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServer$DefaultServerProtocolExecutor.execute(DefaultServer.java:208) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.executeProtocol(DefaultServerConnection.java:113) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:82) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:73) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServer$OperationCountTrackingConnection.command(DefaultServer.java:298) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$executeRetryableWrite$10(SyncOperationHelper.java:267) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$withSourceAndConnection$0(SyncOperationHelper.java:131) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:156) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$withSourceAndConnection$1(SyncOperationHelper.java:130) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:156) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSourceAndConnection(SyncOperationHelper.java:129) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$executeRetryableWrite$11(SyncOperationHelper.java:252) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$decorateWriteWithRetries$12(SyncOperationHelper.java:308) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:67) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.executeRetryableWrite(SyncOperationHelper.java:279) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.TransactionOperation.execute(TransactionOperation.java:60) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.CommitTransactionOperation.execute(CommitTransactionOperation.java:69) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.CommitTransactionOperation.execute(CommitTransactionOperation.java:48) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.client.internal.MongoClusterImpl$OperationExecutorImpl.execute(MongoClusterImpl.java:379) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionImpl.commitTransaction(ClientSessionImpl.java:203) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionImpl.commitTransaction(ClientSessionImpl.java:111) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at org.springframework.data.mongodb.MongoTransactionManager$MongoTransactionObject.commitTransaction(MongoTransactionManager.java:443) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:230) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:194) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	... 38 common frames omitted
+
+2025-04-05T11:31:27.808+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] l.a.BatchMessagingMessageListenerAdapter : Processing [GenericMessage [payload=[1, 2], headers={kafka_offset=[3, 4], kafka_conversionFailures=[], kafka_consumer=org.springframework.kafka.core.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer@2573593d, kafka_timestampType=[CREATE_TIME, CREATE_TIME], kafka_receivedPartitionId=[0, 0], kafka_receivedMessageKey=[ef8db747-bc92-422a-afde-2ab1fcf17024, eb0ea8a0-3056-4cb2-82b9-264dc2329f28], kafka_batchConvertedHeaders=[{}, {}], kafka_receivedTopic=[test, test], kafka_receivedTimestamp=[1743845487736, 1743845487737], kafka_groupId=test}]]
+2025-04-05T11:31:27.808+02:00  INFO 41552 --- [ntainer#0-0-C-1] i.r.t.MyListener                         : Received: [1, 2]
+2025-04-05T11:31:27.808+02:00 TRACE 41552 --- [ntainer#0-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [it.riccardoforzan.transactioninkafkalistener.MyService.transactionalBulkSave]
+2025-04-05T11:31:27.810+02:00 ERROR 41552 --- [ntainer#0-0-C-1] i.r.t.MyService                          : Bulk write operation error on server localhost:50859. Write errors: [BulkWriteError{index=0, code=11000, message='E11000 duplicate key error collection: test.myDocument index: value dup key: { value: "1" }', details={}}].
+2025-04-05T11:31:27.811+02:00  INFO 41552 --- [ntainer#0-0-C-1] i.r.t.MyService                          : saved [MyDocument[id=67f0f86f3abbd823e4cbb59c, value=2]]
+2025-04-05T11:31:27.811+02:00 TRACE 41552 --- [ntainer#0-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [it.riccardoforzan.transactioninkafkalistener.MyService.transactionalBulkSave]
+2025-04-05T11:31:27.814+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] o.s.k.l.FallbackBatchErrorHandler        : Retry failed for: test-0@3,test-0@4
+
+org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'public void it.riccardoforzan.transactioninkafkalistener.MyListener.listen(java.util.List<java.lang.String>)' threw exception
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2994) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2473) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchOnMessageWithRecordsOrList(KafkaMessageListenerContainer.java:2440) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$invokeBatchErrorHandler$43(KafkaMessageListenerContainer.java:2485) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.ErrorHandlingUtils.retryBatch(ErrorHandlingUtils.java:143) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FallbackBatchErrorHandler.handleBatch(FallbackBatchErrorHandler.java:152) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.fallback(FailedBatchProcessor.java:195) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.handle(FailedBatchProcessor.java:166) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.doHandle(FailedBatchProcessor.java:157) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.DefaultErrorHandler.handleBatch(DefaultErrorHandler.java:176) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchErrorHandler(KafkaMessageListenerContainer.java:2483) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchListener(KafkaMessageListenerContainer.java:2274) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchListener(KafkaMessageListenerContainer.java:2170) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2149) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1528) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1466) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1335) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run$$$capture(CompletableFuture.java:1804) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+	Suppressed: org.springframework.kafka.listener.ListenerExecutionFailedException: Restored Stack Trace
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:489) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:421) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:168) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:60) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2459) ~[spring-kafka-3.3.4.jar:3.3.4]
+Caused by: org.springframework.transaction.TransactionSystemException: Could not commit Mongo transaction for session [ClientSessionImpl@565e9f5a id = {"id": {"$binary": {"base64": "IaaZzOUlTcW/HpUKQPICDQ==", "subType": "04"}}}, causallyConsistent = true, txActive = false, txNumber = 6, closed = false, clusterTime = {"clusterTime": {"$timestamp": {"t": 1743845487, "i": 7}}, "signature": {"hash": {"$binary": {"base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=", "subType": "00"}}, "keyId": 0}}].
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:197) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:795) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:758) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:698) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:416) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.5.jar:6.2.5]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727) ~[spring-aop-6.2.5.jar:6.2.5]
+	at it.riccardoforzan.transactioninkafkalistener.MyService$$SpringCGLIB$$0.transactionalBulkSave(<generated>) ~[classes/:na]
+	at it.riccardoforzan.transactioninkafkalistener.MyListener.listen(MyListener.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169) ~[spring-messaging-6.2.5.jar:6.2.5]
+	at org.springframework.kafka.listener.adapter.KotlinAwareInvocableHandlerMethod.doInvoke(KotlinAwareInvocableHandlerMethod.java:45) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119) ~[spring-messaging-6.2.5.jar:6.2.5]
+	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:78) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:467) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:421) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:168) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:60) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2459) ~[spring-kafka-3.3.4.jar:3.3.4]
+	... 18 common frames omitted
+Caused by: com.mongodb.MongoCommandException: Command failed with error 251 (NoSuchTransaction): 'Transaction with { txnNumber: 6 } has been aborted.' on server localhost:50859. The full response is {"errorLabels": ["TransientTransactionError"], "ok": 0.0, "errmsg": "Transaction with { txnNumber: 6 } has been aborted.", "code": 251, "codeName": "NoSuchTransaction", "$clusterTime": {"clusterTime": {"$timestamp": {"t": 1743845487, "i": 7}}, "signature": {"hash": {"$binary": {"base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=", "subType": "00"}}, "keyId": 0}}, "operationTime": {"$timestamp": {"t": 1743845487, "i": 7}}}
+	at com.mongodb.internal.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:210) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:520) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceiveInternal(InternalStreamConnection.java:448) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.lambda$sendAndReceive$0(InternalStreamConnection.java:375) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:378) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection.sendAndReceive(UsageTrackingInternalConnection.java:111) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.sendAndReceive(DefaultConnectionPool.java:748) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.CommandProtocolImpl.execute(CommandProtocolImpl.java:68) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServer$DefaultServerProtocolExecutor.execute(DefaultServer.java:208) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.executeProtocol(DefaultServerConnection.java:113) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:82) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:73) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServer$OperationCountTrackingConnection.command(DefaultServer.java:298) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$executeRetryableWrite$10(SyncOperationHelper.java:267) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$withSourceAndConnection$0(SyncOperationHelper.java:131) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:156) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$withSourceAndConnection$1(SyncOperationHelper.java:130) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:156) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSourceAndConnection(SyncOperationHelper.java:129) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$executeRetryableWrite$11(SyncOperationHelper.java:252) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$decorateWriteWithRetries$12(SyncOperationHelper.java:308) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:67) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.executeRetryableWrite(SyncOperationHelper.java:279) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.TransactionOperation.execute(TransactionOperation.java:60) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.CommitTransactionOperation.execute(CommitTransactionOperation.java:69) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.CommitTransactionOperation.execute(CommitTransactionOperation.java:48) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.client.internal.MongoClusterImpl$OperationExecutorImpl.execute(MongoClusterImpl.java:379) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionImpl.commitTransaction(ClientSessionImpl.java:203) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionImpl.commitTransaction(ClientSessionImpl.java:111) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at org.springframework.data.mongodb.MongoTransactionManager$MongoTransactionObject.commitTransaction(MongoTransactionManager.java:443) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:230) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:194) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	... 38 common frames omitted
+
+2025-04-05T11:31:27.828+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] l.a.BatchMessagingMessageListenerAdapter : Processing [GenericMessage [payload=[1, 2], headers={kafka_offset=[3, 4], kafka_conversionFailures=[], kafka_consumer=org.springframework.kafka.core.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer@2573593d, kafka_timestampType=[CREATE_TIME, CREATE_TIME], kafka_receivedPartitionId=[0, 0], kafka_receivedMessageKey=[ef8db747-bc92-422a-afde-2ab1fcf17024, eb0ea8a0-3056-4cb2-82b9-264dc2329f28], kafka_batchConvertedHeaders=[{}, {}], kafka_receivedTopic=[test, test], kafka_receivedTimestamp=[1743845487736, 1743845487737], kafka_groupId=test}]]
+2025-04-05T11:31:27.828+02:00  INFO 41552 --- [ntainer#0-0-C-1] i.r.t.MyListener                         : Received: [1, 2]
+2025-04-05T11:31:27.828+02:00 TRACE 41552 --- [ntainer#0-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [it.riccardoforzan.transactioninkafkalistener.MyService.transactionalBulkSave]
+2025-04-05T11:31:27.830+02:00 ERROR 41552 --- [ntainer#0-0-C-1] i.r.t.MyService                          : Bulk write operation error on server localhost:50859. Write errors: [BulkWriteError{index=0, code=11000, message='E11000 duplicate key error collection: test.myDocument index: value dup key: { value: "1" }', details={}}].
+2025-04-05T11:31:27.831+02:00  INFO 41552 --- [ntainer#0-0-C-1] i.r.t.MyService                          : saved [MyDocument[id=67f0f86f3abbd823e4cbb59e, value=2]]
+2025-04-05T11:31:27.831+02:00 TRACE 41552 --- [ntainer#0-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [it.riccardoforzan.transactioninkafkalistener.MyService.transactionalBulkSave]
+2025-04-05T11:31:27.834+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] o.s.k.l.FallbackBatchErrorHandler        : Retry failed for: test-0@3,test-0@4
+
+org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'public void it.riccardoforzan.transactioninkafkalistener.MyListener.listen(java.util.List<java.lang.String>)' threw exception
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2994) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2473) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchOnMessageWithRecordsOrList(KafkaMessageListenerContainer.java:2440) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$invokeBatchErrorHandler$43(KafkaMessageListenerContainer.java:2485) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.ErrorHandlingUtils.retryBatch(ErrorHandlingUtils.java:143) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FallbackBatchErrorHandler.handleBatch(FallbackBatchErrorHandler.java:152) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.fallback(FailedBatchProcessor.java:195) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.handle(FailedBatchProcessor.java:166) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.doHandle(FailedBatchProcessor.java:157) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.DefaultErrorHandler.handleBatch(DefaultErrorHandler.java:176) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchErrorHandler(KafkaMessageListenerContainer.java:2483) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchListener(KafkaMessageListenerContainer.java:2274) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchListener(KafkaMessageListenerContainer.java:2170) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2149) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1528) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1466) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1335) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run$$$capture(CompletableFuture.java:1804) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+	Suppressed: org.springframework.kafka.listener.ListenerExecutionFailedException: Restored Stack Trace
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:489) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:421) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:168) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:60) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2459) ~[spring-kafka-3.3.4.jar:3.3.4]
+Caused by: org.springframework.transaction.TransactionSystemException: Could not commit Mongo transaction for session [ClientSessionImpl@7c99013b id = {"id": {"$binary": {"base64": "IaaZzOUlTcW/HpUKQPICDQ==", "subType": "04"}}}, causallyConsistent = true, txActive = false, txNumber = 7, closed = false, clusterTime = {"clusterTime": {"$timestamp": {"t": 1743845487, "i": 8}}, "signature": {"hash": {"$binary": {"base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=", "subType": "00"}}, "keyId": 0}}].
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:197) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:795) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:758) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:698) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:416) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.5.jar:6.2.5]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727) ~[spring-aop-6.2.5.jar:6.2.5]
+	at it.riccardoforzan.transactioninkafkalistener.MyService$$SpringCGLIB$$0.transactionalBulkSave(<generated>) ~[classes/:na]
+	at it.riccardoforzan.transactioninkafkalistener.MyListener.listen(MyListener.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169) ~[spring-messaging-6.2.5.jar:6.2.5]
+	at org.springframework.kafka.listener.adapter.KotlinAwareInvocableHandlerMethod.doInvoke(KotlinAwareInvocableHandlerMethod.java:45) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119) ~[spring-messaging-6.2.5.jar:6.2.5]
+	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:78) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:467) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:421) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:168) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:60) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2459) ~[spring-kafka-3.3.4.jar:3.3.4]
+	... 18 common frames omitted
+Caused by: com.mongodb.MongoCommandException: Command failed with error 251 (NoSuchTransaction): 'Transaction with { txnNumber: 7 } has been aborted.' on server localhost:50859. The full response is {"errorLabels": ["TransientTransactionError"], "ok": 0.0, "errmsg": "Transaction with { txnNumber: 7 } has been aborted.", "code": 251, "codeName": "NoSuchTransaction", "$clusterTime": {"clusterTime": {"$timestamp": {"t": 1743845487, "i": 8}}, "signature": {"hash": {"$binary": {"base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=", "subType": "00"}}, "keyId": 0}}, "operationTime": {"$timestamp": {"t": 1743845487, "i": 8}}}
+	at com.mongodb.internal.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:210) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:520) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceiveInternal(InternalStreamConnection.java:448) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.lambda$sendAndReceive$0(InternalStreamConnection.java:375) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:378) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection.sendAndReceive(UsageTrackingInternalConnection.java:111) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.sendAndReceive(DefaultConnectionPool.java:748) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.CommandProtocolImpl.execute(CommandProtocolImpl.java:68) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServer$DefaultServerProtocolExecutor.execute(DefaultServer.java:208) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.executeProtocol(DefaultServerConnection.java:113) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:82) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:73) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServer$OperationCountTrackingConnection.command(DefaultServer.java:298) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$executeRetryableWrite$10(SyncOperationHelper.java:267) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$withSourceAndConnection$0(SyncOperationHelper.java:131) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:156) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$withSourceAndConnection$1(SyncOperationHelper.java:130) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:156) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSourceAndConnection(SyncOperationHelper.java:129) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$executeRetryableWrite$11(SyncOperationHelper.java:252) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$decorateWriteWithRetries$12(SyncOperationHelper.java:308) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:67) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.executeRetryableWrite(SyncOperationHelper.java:279) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.TransactionOperation.execute(TransactionOperation.java:60) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.CommitTransactionOperation.execute(CommitTransactionOperation.java:69) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.CommitTransactionOperation.execute(CommitTransactionOperation.java:48) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.client.internal.MongoClusterImpl$OperationExecutorImpl.execute(MongoClusterImpl.java:379) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionImpl.commitTransaction(ClientSessionImpl.java:203) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionImpl.commitTransaction(ClientSessionImpl.java:111) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at org.springframework.data.mongodb.MongoTransactionManager$MongoTransactionObject.commitTransaction(MongoTransactionManager.java:443) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:230) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:194) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	... 38 common frames omitted
+
+2025-04-05T11:31:27.846+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] l.a.BatchMessagingMessageListenerAdapter : Processing [GenericMessage [payload=[1, 2], headers={kafka_offset=[3, 4], kafka_conversionFailures=[], kafka_consumer=org.springframework.kafka.core.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer@2573593d, kafka_timestampType=[CREATE_TIME, CREATE_TIME], kafka_receivedPartitionId=[0, 0], kafka_receivedMessageKey=[ef8db747-bc92-422a-afde-2ab1fcf17024, eb0ea8a0-3056-4cb2-82b9-264dc2329f28], kafka_batchConvertedHeaders=[{}, {}], kafka_receivedTopic=[test, test], kafka_receivedTimestamp=[1743845487736, 1743845487737], kafka_groupId=test}]]
+2025-04-05T11:31:27.846+02:00  INFO 41552 --- [ntainer#0-0-C-1] i.r.t.MyListener                         : Received: [1, 2]
+2025-04-05T11:31:27.846+02:00 TRACE 41552 --- [ntainer#0-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [it.riccardoforzan.transactioninkafkalistener.MyService.transactionalBulkSave]
+2025-04-05T11:31:27.848+02:00 ERROR 41552 --- [ntainer#0-0-C-1] i.r.t.MyService                          : Bulk write operation error on server localhost:50859. Write errors: [BulkWriteError{index=0, code=11000, message='E11000 duplicate key error collection: test.myDocument index: value dup key: { value: "1" }', details={}}].
+2025-04-05T11:31:27.848+02:00  INFO 41552 --- [ntainer#0-0-C-1] i.r.t.MyService                          : saved [MyDocument[id=67f0f86f3abbd823e4cbb5a0, value=2]]
+2025-04-05T11:31:27.848+02:00 TRACE 41552 --- [ntainer#0-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [it.riccardoforzan.transactioninkafkalistener.MyService.transactionalBulkSave]
+2025-04-05T11:31:27.851+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] o.s.k.l.FallbackBatchErrorHandler        : Retry failed for: test-0@3,test-0@4
+
+org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'public void it.riccardoforzan.transactioninkafkalistener.MyListener.listen(java.util.List<java.lang.String>)' threw exception
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2994) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2473) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchOnMessageWithRecordsOrList(KafkaMessageListenerContainer.java:2440) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$invokeBatchErrorHandler$43(KafkaMessageListenerContainer.java:2485) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.ErrorHandlingUtils.retryBatch(ErrorHandlingUtils.java:143) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FallbackBatchErrorHandler.handleBatch(FallbackBatchErrorHandler.java:152) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.fallback(FailedBatchProcessor.java:195) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.handle(FailedBatchProcessor.java:166) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.doHandle(FailedBatchProcessor.java:157) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.DefaultErrorHandler.handleBatch(DefaultErrorHandler.java:176) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchErrorHandler(KafkaMessageListenerContainer.java:2483) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchListener(KafkaMessageListenerContainer.java:2274) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchListener(KafkaMessageListenerContainer.java:2170) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2149) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1528) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1466) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1335) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run$$$capture(CompletableFuture.java:1804) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+	Suppressed: org.springframework.kafka.listener.ListenerExecutionFailedException: Restored Stack Trace
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:489) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:421) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:168) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:60) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2459) ~[spring-kafka-3.3.4.jar:3.3.4]
+Caused by: org.springframework.transaction.TransactionSystemException: Could not commit Mongo transaction for session [ClientSessionImpl@4d6ba9e8 id = {"id": {"$binary": {"base64": "IaaZzOUlTcW/HpUKQPICDQ==", "subType": "04"}}}, causallyConsistent = true, txActive = false, txNumber = 8, closed = false, clusterTime = {"clusterTime": {"$timestamp": {"t": 1743845487, "i": 9}}, "signature": {"hash": {"$binary": {"base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=", "subType": "00"}}, "keyId": 0}}].
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:197) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:795) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:758) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:698) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:416) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.5.jar:6.2.5]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727) ~[spring-aop-6.2.5.jar:6.2.5]
+	at it.riccardoforzan.transactioninkafkalistener.MyService$$SpringCGLIB$$0.transactionalBulkSave(<generated>) ~[classes/:na]
+	at it.riccardoforzan.transactioninkafkalistener.MyListener.listen(MyListener.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169) ~[spring-messaging-6.2.5.jar:6.2.5]
+	at org.springframework.kafka.listener.adapter.KotlinAwareInvocableHandlerMethod.doInvoke(KotlinAwareInvocableHandlerMethod.java:45) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119) ~[spring-messaging-6.2.5.jar:6.2.5]
+	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:78) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:467) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:421) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:168) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:60) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2459) ~[spring-kafka-3.3.4.jar:3.3.4]
+	... 18 common frames omitted
+Caused by: com.mongodb.MongoCommandException: Command failed with error 251 (NoSuchTransaction): 'Transaction with { txnNumber: 8 } has been aborted.' on server localhost:50859. The full response is {"errorLabels": ["TransientTransactionError"], "ok": 0.0, "errmsg": "Transaction with { txnNumber: 8 } has been aborted.", "code": 251, "codeName": "NoSuchTransaction", "$clusterTime": {"clusterTime": {"$timestamp": {"t": 1743845487, "i": 9}}, "signature": {"hash": {"$binary": {"base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=", "subType": "00"}}, "keyId": 0}}, "operationTime": {"$timestamp": {"t": 1743845487, "i": 9}}}
+	at com.mongodb.internal.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:210) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:520) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceiveInternal(InternalStreamConnection.java:448) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.lambda$sendAndReceive$0(InternalStreamConnection.java:375) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:378) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection.sendAndReceive(UsageTrackingInternalConnection.java:111) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.sendAndReceive(DefaultConnectionPool.java:748) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.CommandProtocolImpl.execute(CommandProtocolImpl.java:68) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServer$DefaultServerProtocolExecutor.execute(DefaultServer.java:208) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.executeProtocol(DefaultServerConnection.java:113) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:82) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:73) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServer$OperationCountTrackingConnection.command(DefaultServer.java:298) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$executeRetryableWrite$10(SyncOperationHelper.java:267) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$withSourceAndConnection$0(SyncOperationHelper.java:131) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:156) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$withSourceAndConnection$1(SyncOperationHelper.java:130) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:156) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSourceAndConnection(SyncOperationHelper.java:129) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$executeRetryableWrite$11(SyncOperationHelper.java:252) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$decorateWriteWithRetries$12(SyncOperationHelper.java:308) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:67) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.executeRetryableWrite(SyncOperationHelper.java:279) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.TransactionOperation.execute(TransactionOperation.java:60) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.CommitTransactionOperation.execute(CommitTransactionOperation.java:69) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.CommitTransactionOperation.execute(CommitTransactionOperation.java:48) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.client.internal.MongoClusterImpl$OperationExecutorImpl.execute(MongoClusterImpl.java:379) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionImpl.commitTransaction(ClientSessionImpl.java:203) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionImpl.commitTransaction(ClientSessionImpl.java:111) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at org.springframework.data.mongodb.MongoTransactionManager$MongoTransactionObject.commitTransaction(MongoTransactionManager.java:443) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:230) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:194) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	... 38 common frames omitted
+
+2025-04-05T11:31:27.864+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] l.a.BatchMessagingMessageListenerAdapter : Processing [GenericMessage [payload=[1, 2], headers={kafka_offset=[3, 4], kafka_conversionFailures=[], kafka_consumer=org.springframework.kafka.core.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer@2573593d, kafka_timestampType=[CREATE_TIME, CREATE_TIME], kafka_receivedPartitionId=[0, 0], kafka_receivedMessageKey=[ef8db747-bc92-422a-afde-2ab1fcf17024, eb0ea8a0-3056-4cb2-82b9-264dc2329f28], kafka_batchConvertedHeaders=[{}, {}], kafka_receivedTopic=[test, test], kafka_receivedTimestamp=[1743845487736, 1743845487737], kafka_groupId=test}]]
+2025-04-05T11:31:27.864+02:00  INFO 41552 --- [ntainer#0-0-C-1] i.r.t.MyListener                         : Received: [1, 2]
+2025-04-05T11:31:27.864+02:00 TRACE 41552 --- [ntainer#0-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [it.riccardoforzan.transactioninkafkalistener.MyService.transactionalBulkSave]
+2025-04-05T11:31:27.867+02:00 ERROR 41552 --- [ntainer#0-0-C-1] i.r.t.MyService                          : Bulk write operation error on server localhost:50859. Write errors: [BulkWriteError{index=0, code=11000, message='E11000 duplicate key error collection: test.myDocument index: value dup key: { value: "1" }', details={}}].
+2025-04-05T11:31:27.867+02:00  INFO 41552 --- [ntainer#0-0-C-1] i.r.t.MyService                          : saved [MyDocument[id=67f0f86f3abbd823e4cbb5a2, value=2]]
+2025-04-05T11:31:27.867+02:00 TRACE 41552 --- [ntainer#0-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [it.riccardoforzan.transactioninkafkalistener.MyService.transactionalBulkSave]
+2025-04-05T11:31:27.870+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] o.s.k.l.FallbackBatchErrorHandler        : Retry failed for: test-0@3,test-0@4
+
+org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'public void it.riccardoforzan.transactioninkafkalistener.MyListener.listen(java.util.List<java.lang.String>)' threw exception
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2994) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2473) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchOnMessageWithRecordsOrList(KafkaMessageListenerContainer.java:2440) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$invokeBatchErrorHandler$43(KafkaMessageListenerContainer.java:2485) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.ErrorHandlingUtils.retryBatch(ErrorHandlingUtils.java:143) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FallbackBatchErrorHandler.handleBatch(FallbackBatchErrorHandler.java:152) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.fallback(FailedBatchProcessor.java:195) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.handle(FailedBatchProcessor.java:166) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.doHandle(FailedBatchProcessor.java:157) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.DefaultErrorHandler.handleBatch(DefaultErrorHandler.java:176) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchErrorHandler(KafkaMessageListenerContainer.java:2483) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchListener(KafkaMessageListenerContainer.java:2274) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchListener(KafkaMessageListenerContainer.java:2170) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2149) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1528) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1466) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1335) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run$$$capture(CompletableFuture.java:1804) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+	Suppressed: org.springframework.kafka.listener.ListenerExecutionFailedException: Restored Stack Trace
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:489) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:421) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:168) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:60) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2459) ~[spring-kafka-3.3.4.jar:3.3.4]
+Caused by: org.springframework.transaction.TransactionSystemException: Could not commit Mongo transaction for session [ClientSessionImpl@21103ebf id = {"id": {"$binary": {"base64": "IaaZzOUlTcW/HpUKQPICDQ==", "subType": "04"}}}, causallyConsistent = true, txActive = false, txNumber = 9, closed = false, clusterTime = {"clusterTime": {"$timestamp": {"t": 1743845487, "i": 10}}, "signature": {"hash": {"$binary": {"base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=", "subType": "00"}}, "keyId": 0}}].
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:197) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:795) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:758) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:698) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:416) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.5.jar:6.2.5]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727) ~[spring-aop-6.2.5.jar:6.2.5]
+	at it.riccardoforzan.transactioninkafkalistener.MyService$$SpringCGLIB$$0.transactionalBulkSave(<generated>) ~[classes/:na]
+	at it.riccardoforzan.transactioninkafkalistener.MyListener.listen(MyListener.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169) ~[spring-messaging-6.2.5.jar:6.2.5]
+	at org.springframework.kafka.listener.adapter.KotlinAwareInvocableHandlerMethod.doInvoke(KotlinAwareInvocableHandlerMethod.java:45) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119) ~[spring-messaging-6.2.5.jar:6.2.5]
+	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:78) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:467) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:421) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:168) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:60) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2459) ~[spring-kafka-3.3.4.jar:3.3.4]
+	... 18 common frames omitted
+Caused by: com.mongodb.MongoCommandException: Command failed with error 251 (NoSuchTransaction): 'Transaction with { txnNumber: 9 } has been aborted.' on server localhost:50859. The full response is {"errorLabels": ["TransientTransactionError"], "ok": 0.0, "errmsg": "Transaction with { txnNumber: 9 } has been aborted.", "code": 251, "codeName": "NoSuchTransaction", "$clusterTime": {"clusterTime": {"$timestamp": {"t": 1743845487, "i": 10}}, "signature": {"hash": {"$binary": {"base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=", "subType": "00"}}, "keyId": 0}}, "operationTime": {"$timestamp": {"t": 1743845487, "i": 10}}}
+	at com.mongodb.internal.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:210) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:520) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceiveInternal(InternalStreamConnection.java:448) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.lambda$sendAndReceive$0(InternalStreamConnection.java:375) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:378) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection.sendAndReceive(UsageTrackingInternalConnection.java:111) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.sendAndReceive(DefaultConnectionPool.java:748) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.CommandProtocolImpl.execute(CommandProtocolImpl.java:68) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServer$DefaultServerProtocolExecutor.execute(DefaultServer.java:208) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.executeProtocol(DefaultServerConnection.java:113) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:82) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:73) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServer$OperationCountTrackingConnection.command(DefaultServer.java:298) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$executeRetryableWrite$10(SyncOperationHelper.java:267) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$withSourceAndConnection$0(SyncOperationHelper.java:131) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:156) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$withSourceAndConnection$1(SyncOperationHelper.java:130) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:156) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSourceAndConnection(SyncOperationHelper.java:129) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$executeRetryableWrite$11(SyncOperationHelper.java:252) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$decorateWriteWithRetries$12(SyncOperationHelper.java:308) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:67) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.executeRetryableWrite(SyncOperationHelper.java:279) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.TransactionOperation.execute(TransactionOperation.java:60) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.CommitTransactionOperation.execute(CommitTransactionOperation.java:69) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.CommitTransactionOperation.execute(CommitTransactionOperation.java:48) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.client.internal.MongoClusterImpl$OperationExecutorImpl.execute(MongoClusterImpl.java:379) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionImpl.commitTransaction(ClientSessionImpl.java:203) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionImpl.commitTransaction(ClientSessionImpl.java:111) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at org.springframework.data.mongodb.MongoTransactionManager$MongoTransactionObject.commitTransaction(MongoTransactionManager.java:443) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:230) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:194) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	... 38 common frames omitted
+
+2025-04-05T11:31:27.883+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] l.a.BatchMessagingMessageListenerAdapter : Processing [GenericMessage [payload=[1, 2], headers={kafka_offset=[3, 4], kafka_conversionFailures=[], kafka_consumer=org.springframework.kafka.core.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer@2573593d, kafka_timestampType=[CREATE_TIME, CREATE_TIME], kafka_receivedPartitionId=[0, 0], kafka_receivedMessageKey=[ef8db747-bc92-422a-afde-2ab1fcf17024, eb0ea8a0-3056-4cb2-82b9-264dc2329f28], kafka_batchConvertedHeaders=[{}, {}], kafka_receivedTopic=[test, test], kafka_receivedTimestamp=[1743845487736, 1743845487737], kafka_groupId=test}]]
+2025-04-05T11:31:27.883+02:00  INFO 41552 --- [ntainer#0-0-C-1] i.r.t.MyListener                         : Received: [1, 2]
+2025-04-05T11:31:27.883+02:00 TRACE 41552 --- [ntainer#0-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [it.riccardoforzan.transactioninkafkalistener.MyService.transactionalBulkSave]
+2025-04-05T11:31:27.886+02:00 ERROR 41552 --- [ntainer#0-0-C-1] i.r.t.MyService                          : Bulk write operation error on server localhost:50859. Write errors: [BulkWriteError{index=0, code=11000, message='E11000 duplicate key error collection: test.myDocument index: value dup key: { value: "1" }', details={}}].
+2025-04-05T11:31:27.886+02:00  INFO 41552 --- [ntainer#0-0-C-1] i.r.t.MyService                          : saved [MyDocument[id=67f0f86f3abbd823e4cbb5a4, value=2]]
+2025-04-05T11:31:27.886+02:00 TRACE 41552 --- [ntainer#0-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [it.riccardoforzan.transactioninkafkalistener.MyService.transactionalBulkSave]
+2025-04-05T11:31:27.889+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] o.s.k.l.FallbackBatchErrorHandler        : Retry failed for: test-0@3,test-0@4
+
+org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'public void it.riccardoforzan.transactioninkafkalistener.MyListener.listen(java.util.List<java.lang.String>)' threw exception
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2994) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2473) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchOnMessageWithRecordsOrList(KafkaMessageListenerContainer.java:2440) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$invokeBatchErrorHandler$43(KafkaMessageListenerContainer.java:2485) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.ErrorHandlingUtils.retryBatch(ErrorHandlingUtils.java:143) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FallbackBatchErrorHandler.handleBatch(FallbackBatchErrorHandler.java:152) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.fallback(FailedBatchProcessor.java:195) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.handle(FailedBatchProcessor.java:166) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.doHandle(FailedBatchProcessor.java:157) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.DefaultErrorHandler.handleBatch(DefaultErrorHandler.java:176) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchErrorHandler(KafkaMessageListenerContainer.java:2483) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchListener(KafkaMessageListenerContainer.java:2274) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchListener(KafkaMessageListenerContainer.java:2170) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2149) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1528) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1466) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1335) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run$$$capture(CompletableFuture.java:1804) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+	Suppressed: org.springframework.kafka.listener.ListenerExecutionFailedException: Restored Stack Trace
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:489) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:421) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:168) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:60) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2459) ~[spring-kafka-3.3.4.jar:3.3.4]
+Caused by: org.springframework.transaction.TransactionSystemException: Could not commit Mongo transaction for session [ClientSessionImpl@6b1854f0 id = {"id": {"$binary": {"base64": "IaaZzOUlTcW/HpUKQPICDQ==", "subType": "04"}}}, causallyConsistent = true, txActive = false, txNumber = 10, closed = false, clusterTime = {"clusterTime": {"$timestamp": {"t": 1743845487, "i": 11}}, "signature": {"hash": {"$binary": {"base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=", "subType": "00"}}, "keyId": 0}}].
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:197) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:795) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:758) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:698) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:416) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.5.jar:6.2.5]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727) ~[spring-aop-6.2.5.jar:6.2.5]
+	at it.riccardoforzan.transactioninkafkalistener.MyService$$SpringCGLIB$$0.transactionalBulkSave(<generated>) ~[classes/:na]
+	at it.riccardoforzan.transactioninkafkalistener.MyListener.listen(MyListener.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169) ~[spring-messaging-6.2.5.jar:6.2.5]
+	at org.springframework.kafka.listener.adapter.KotlinAwareInvocableHandlerMethod.doInvoke(KotlinAwareInvocableHandlerMethod.java:45) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119) ~[spring-messaging-6.2.5.jar:6.2.5]
+	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:78) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:467) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:421) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:168) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:60) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2459) ~[spring-kafka-3.3.4.jar:3.3.4]
+	... 18 common frames omitted
+Caused by: com.mongodb.MongoCommandException: Command failed with error 251 (NoSuchTransaction): 'Transaction with { txnNumber: 10 } has been aborted.' on server localhost:50859. The full response is {"errorLabels": ["TransientTransactionError"], "ok": 0.0, "errmsg": "Transaction with { txnNumber: 10 } has been aborted.", "code": 251, "codeName": "NoSuchTransaction", "$clusterTime": {"clusterTime": {"$timestamp": {"t": 1743845487, "i": 11}}, "signature": {"hash": {"$binary": {"base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=", "subType": "00"}}, "keyId": 0}}, "operationTime": {"$timestamp": {"t": 1743845487, "i": 11}}}
+	at com.mongodb.internal.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:210) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:520) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceiveInternal(InternalStreamConnection.java:448) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.lambda$sendAndReceive$0(InternalStreamConnection.java:375) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:378) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection.sendAndReceive(UsageTrackingInternalConnection.java:111) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.sendAndReceive(DefaultConnectionPool.java:748) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.CommandProtocolImpl.execute(CommandProtocolImpl.java:68) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServer$DefaultServerProtocolExecutor.execute(DefaultServer.java:208) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.executeProtocol(DefaultServerConnection.java:113) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:82) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:73) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServer$OperationCountTrackingConnection.command(DefaultServer.java:298) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$executeRetryableWrite$10(SyncOperationHelper.java:267) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$withSourceAndConnection$0(SyncOperationHelper.java:131) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:156) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$withSourceAndConnection$1(SyncOperationHelper.java:130) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:156) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSourceAndConnection(SyncOperationHelper.java:129) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$executeRetryableWrite$11(SyncOperationHelper.java:252) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$decorateWriteWithRetries$12(SyncOperationHelper.java:308) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:67) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.executeRetryableWrite(SyncOperationHelper.java:279) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.TransactionOperation.execute(TransactionOperation.java:60) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.CommitTransactionOperation.execute(CommitTransactionOperation.java:69) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.CommitTransactionOperation.execute(CommitTransactionOperation.java:48) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.client.internal.MongoClusterImpl$OperationExecutorImpl.execute(MongoClusterImpl.java:379) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionImpl.commitTransaction(ClientSessionImpl.java:203) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionImpl.commitTransaction(ClientSessionImpl.java:111) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at org.springframework.data.mongodb.MongoTransactionManager$MongoTransactionObject.commitTransaction(MongoTransactionManager.java:443) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:230) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:194) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	... 38 common frames omitted
+
+2025-04-05T11:31:27.902+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] l.a.BatchMessagingMessageListenerAdapter : Processing [GenericMessage [payload=[1, 2], headers={kafka_offset=[3, 4], kafka_conversionFailures=[], kafka_consumer=org.springframework.kafka.core.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer@2573593d, kafka_timestampType=[CREATE_TIME, CREATE_TIME], kafka_receivedPartitionId=[0, 0], kafka_receivedMessageKey=[ef8db747-bc92-422a-afde-2ab1fcf17024, eb0ea8a0-3056-4cb2-82b9-264dc2329f28], kafka_batchConvertedHeaders=[{}, {}], kafka_receivedTopic=[test, test], kafka_receivedTimestamp=[1743845487736, 1743845487737], kafka_groupId=test}]]
+2025-04-05T11:31:27.902+02:00  INFO 41552 --- [ntainer#0-0-C-1] i.r.t.MyListener                         : Received: [1, 2]
+2025-04-05T11:31:27.902+02:00 TRACE 41552 --- [ntainer#0-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [it.riccardoforzan.transactioninkafkalistener.MyService.transactionalBulkSave]
+2025-04-05T11:31:27.906+02:00 ERROR 41552 --- [ntainer#0-0-C-1] i.r.t.MyService                          : Bulk write operation error on server localhost:50859. Write errors: [BulkWriteError{index=0, code=11000, message='E11000 duplicate key error collection: test.myDocument index: value dup key: { value: "1" }', details={}}].
+2025-04-05T11:31:27.907+02:00  INFO 41552 --- [ntainer#0-0-C-1] i.r.t.MyService                          : saved [MyDocument[id=67f0f86f3abbd823e4cbb5a6, value=2]]
+2025-04-05T11:31:27.907+02:00 TRACE 41552 --- [ntainer#0-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [it.riccardoforzan.transactioninkafkalistener.MyService.transactionalBulkSave]
+2025-04-05T11:31:27.910+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] o.s.k.l.FallbackBatchErrorHandler        : Retry failed for: test-0@3,test-0@4
+
+org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'public void it.riccardoforzan.transactioninkafkalistener.MyListener.listen(java.util.List<java.lang.String>)' threw exception
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2994) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2473) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchOnMessageWithRecordsOrList(KafkaMessageListenerContainer.java:2440) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$invokeBatchErrorHandler$43(KafkaMessageListenerContainer.java:2485) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.ErrorHandlingUtils.retryBatch(ErrorHandlingUtils.java:143) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FallbackBatchErrorHandler.handleBatch(FallbackBatchErrorHandler.java:152) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.fallback(FailedBatchProcessor.java:195) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.handle(FailedBatchProcessor.java:166) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.doHandle(FailedBatchProcessor.java:157) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.DefaultErrorHandler.handleBatch(DefaultErrorHandler.java:176) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchErrorHandler(KafkaMessageListenerContainer.java:2483) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchListener(KafkaMessageListenerContainer.java:2274) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchListener(KafkaMessageListenerContainer.java:2170) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2149) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1528) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1466) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1335) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run$$$capture(CompletableFuture.java:1804) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+	Suppressed: org.springframework.kafka.listener.ListenerExecutionFailedException: Restored Stack Trace
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:489) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:421) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:168) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:60) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2459) ~[spring-kafka-3.3.4.jar:3.3.4]
+Caused by: org.springframework.transaction.TransactionSystemException: Could not commit Mongo transaction for session [ClientSessionImpl@365754a5 id = {"id": {"$binary": {"base64": "IaaZzOUlTcW/HpUKQPICDQ==", "subType": "04"}}}, causallyConsistent = true, txActive = false, txNumber = 11, closed = false, clusterTime = {"clusterTime": {"$timestamp": {"t": 1743845487, "i": 12}}, "signature": {"hash": {"$binary": {"base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=", "subType": "00"}}, "keyId": 0}}].
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:197) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:795) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:758) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:698) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:416) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.5.jar:6.2.5]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727) ~[spring-aop-6.2.5.jar:6.2.5]
+	at it.riccardoforzan.transactioninkafkalistener.MyService$$SpringCGLIB$$0.transactionalBulkSave(<generated>) ~[classes/:na]
+	at it.riccardoforzan.transactioninkafkalistener.MyListener.listen(MyListener.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169) ~[spring-messaging-6.2.5.jar:6.2.5]
+	at org.springframework.kafka.listener.adapter.KotlinAwareInvocableHandlerMethod.doInvoke(KotlinAwareInvocableHandlerMethod.java:45) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119) ~[spring-messaging-6.2.5.jar:6.2.5]
+	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:78) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:467) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:421) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:168) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:60) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2459) ~[spring-kafka-3.3.4.jar:3.3.4]
+	... 18 common frames omitted
+Caused by: com.mongodb.MongoCommandException: Command failed with error 251 (NoSuchTransaction): 'Transaction with { txnNumber: 11 } has been aborted.' on server localhost:50859. The full response is {"errorLabels": ["TransientTransactionError"], "ok": 0.0, "errmsg": "Transaction with { txnNumber: 11 } has been aborted.", "code": 251, "codeName": "NoSuchTransaction", "$clusterTime": {"clusterTime": {"$timestamp": {"t": 1743845487, "i": 12}}, "signature": {"hash": {"$binary": {"base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=", "subType": "00"}}, "keyId": 0}}, "operationTime": {"$timestamp": {"t": 1743845487, "i": 12}}}
+	at com.mongodb.internal.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:210) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:520) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceiveInternal(InternalStreamConnection.java:448) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.lambda$sendAndReceive$0(InternalStreamConnection.java:375) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:378) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection.sendAndReceive(UsageTrackingInternalConnection.java:111) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.sendAndReceive(DefaultConnectionPool.java:748) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.CommandProtocolImpl.execute(CommandProtocolImpl.java:68) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServer$DefaultServerProtocolExecutor.execute(DefaultServer.java:208) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.executeProtocol(DefaultServerConnection.java:113) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:82) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:73) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServer$OperationCountTrackingConnection.command(DefaultServer.java:298) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$executeRetryableWrite$10(SyncOperationHelper.java:267) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$withSourceAndConnection$0(SyncOperationHelper.java:131) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:156) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$withSourceAndConnection$1(SyncOperationHelper.java:130) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:156) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSourceAndConnection(SyncOperationHelper.java:129) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$executeRetryableWrite$11(SyncOperationHelper.java:252) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$decorateWriteWithRetries$12(SyncOperationHelper.java:308) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:67) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.executeRetryableWrite(SyncOperationHelper.java:279) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.TransactionOperation.execute(TransactionOperation.java:60) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.CommitTransactionOperation.execute(CommitTransactionOperation.java:69) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.CommitTransactionOperation.execute(CommitTransactionOperation.java:48) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.client.internal.MongoClusterImpl$OperationExecutorImpl.execute(MongoClusterImpl.java:379) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionImpl.commitTransaction(ClientSessionImpl.java:203) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionImpl.commitTransaction(ClientSessionImpl.java:111) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at org.springframework.data.mongodb.MongoTransactionManager$MongoTransactionObject.commitTransaction(MongoTransactionManager.java:443) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:230) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:194) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	... 38 common frames omitted
+
+2025-04-05T11:31:27.924+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] l.a.BatchMessagingMessageListenerAdapter : Processing [GenericMessage [payload=[1, 2], headers={kafka_offset=[3, 4], kafka_conversionFailures=[], kafka_consumer=org.springframework.kafka.core.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer@2573593d, kafka_timestampType=[CREATE_TIME, CREATE_TIME], kafka_receivedPartitionId=[0, 0], kafka_receivedMessageKey=[ef8db747-bc92-422a-afde-2ab1fcf17024, eb0ea8a0-3056-4cb2-82b9-264dc2329f28], kafka_batchConvertedHeaders=[{}, {}], kafka_receivedTopic=[test, test], kafka_receivedTimestamp=[1743845487736, 1743845487737], kafka_groupId=test}]]
+2025-04-05T11:31:27.924+02:00  INFO 41552 --- [ntainer#0-0-C-1] i.r.t.MyListener                         : Received: [1, 2]
+2025-04-05T11:31:27.924+02:00 TRACE 41552 --- [ntainer#0-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [it.riccardoforzan.transactioninkafkalistener.MyService.transactionalBulkSave]
+2025-04-05T11:31:27.927+02:00 ERROR 41552 --- [ntainer#0-0-C-1] i.r.t.MyService                          : Bulk write operation error on server localhost:50859. Write errors: [BulkWriteError{index=0, code=11000, message='E11000 duplicate key error collection: test.myDocument index: value dup key: { value: "1" }', details={}}].
+2025-04-05T11:31:27.927+02:00  INFO 41552 --- [ntainer#0-0-C-1] i.r.t.MyService                          : saved [MyDocument[id=67f0f86f3abbd823e4cbb5a8, value=2]]
+2025-04-05T11:31:27.927+02:00 TRACE 41552 --- [ntainer#0-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [it.riccardoforzan.transactioninkafkalistener.MyService.transactionalBulkSave]
+2025-04-05T11:31:27.931+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] o.s.k.l.FallbackBatchErrorHandler        : Retry failed for: test-0@3,test-0@4
+
+org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'public void it.riccardoforzan.transactioninkafkalistener.MyListener.listen(java.util.List<java.lang.String>)' threw exception
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2994) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2473) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchOnMessageWithRecordsOrList(KafkaMessageListenerContainer.java:2440) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$invokeBatchErrorHandler$43(KafkaMessageListenerContainer.java:2485) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.ErrorHandlingUtils.retryBatch(ErrorHandlingUtils.java:143) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FallbackBatchErrorHandler.handleBatch(FallbackBatchErrorHandler.java:152) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.fallback(FailedBatchProcessor.java:195) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.handle(FailedBatchProcessor.java:166) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.doHandle(FailedBatchProcessor.java:157) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.DefaultErrorHandler.handleBatch(DefaultErrorHandler.java:176) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchErrorHandler(KafkaMessageListenerContainer.java:2483) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchListener(KafkaMessageListenerContainer.java:2274) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchListener(KafkaMessageListenerContainer.java:2170) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2149) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1528) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1466) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1335) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run$$$capture(CompletableFuture.java:1804) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+	Suppressed: org.springframework.kafka.listener.ListenerExecutionFailedException: Restored Stack Trace
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:489) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:421) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:168) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:60) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2459) ~[spring-kafka-3.3.4.jar:3.3.4]
+Caused by: org.springframework.transaction.TransactionSystemException: Could not commit Mongo transaction for session [ClientSessionImpl@288be8b9 id = {"id": {"$binary": {"base64": "IaaZzOUlTcW/HpUKQPICDQ==", "subType": "04"}}}, causallyConsistent = true, txActive = false, txNumber = 12, closed = false, clusterTime = {"clusterTime": {"$timestamp": {"t": 1743845487, "i": 13}}, "signature": {"hash": {"$binary": {"base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=", "subType": "00"}}, "keyId": 0}}].
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:197) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:795) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:758) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:698) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:416) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.5.jar:6.2.5]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727) ~[spring-aop-6.2.5.jar:6.2.5]
+	at it.riccardoforzan.transactioninkafkalistener.MyService$$SpringCGLIB$$0.transactionalBulkSave(<generated>) ~[classes/:na]
+	at it.riccardoforzan.transactioninkafkalistener.MyListener.listen(MyListener.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169) ~[spring-messaging-6.2.5.jar:6.2.5]
+	at org.springframework.kafka.listener.adapter.KotlinAwareInvocableHandlerMethod.doInvoke(KotlinAwareInvocableHandlerMethod.java:45) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119) ~[spring-messaging-6.2.5.jar:6.2.5]
+	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:78) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:467) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:421) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:168) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:60) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2459) ~[spring-kafka-3.3.4.jar:3.3.4]
+	... 18 common frames omitted
+Caused by: com.mongodb.MongoCommandException: Command failed with error 251 (NoSuchTransaction): 'Transaction with { txnNumber: 12 } has been aborted.' on server localhost:50859. The full response is {"errorLabels": ["TransientTransactionError"], "ok": 0.0, "errmsg": "Transaction with { txnNumber: 12 } has been aborted.", "code": 251, "codeName": "NoSuchTransaction", "$clusterTime": {"clusterTime": {"$timestamp": {"t": 1743845487, "i": 13}}, "signature": {"hash": {"$binary": {"base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=", "subType": "00"}}, "keyId": 0}}, "operationTime": {"$timestamp": {"t": 1743845487, "i": 13}}}
+	at com.mongodb.internal.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:210) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:520) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceiveInternal(InternalStreamConnection.java:448) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.lambda$sendAndReceive$0(InternalStreamConnection.java:375) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:378) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection.sendAndReceive(UsageTrackingInternalConnection.java:111) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.sendAndReceive(DefaultConnectionPool.java:748) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.CommandProtocolImpl.execute(CommandProtocolImpl.java:68) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServer$DefaultServerProtocolExecutor.execute(DefaultServer.java:208) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.executeProtocol(DefaultServerConnection.java:113) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:82) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:73) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServer$OperationCountTrackingConnection.command(DefaultServer.java:298) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$executeRetryableWrite$10(SyncOperationHelper.java:267) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$withSourceAndConnection$0(SyncOperationHelper.java:131) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:156) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$withSourceAndConnection$1(SyncOperationHelper.java:130) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:156) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSourceAndConnection(SyncOperationHelper.java:129) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$executeRetryableWrite$11(SyncOperationHelper.java:252) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$decorateWriteWithRetries$12(SyncOperationHelper.java:308) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:67) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.executeRetryableWrite(SyncOperationHelper.java:279) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.TransactionOperation.execute(TransactionOperation.java:60) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.CommitTransactionOperation.execute(CommitTransactionOperation.java:69) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.CommitTransactionOperation.execute(CommitTransactionOperation.java:48) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.client.internal.MongoClusterImpl$OperationExecutorImpl.execute(MongoClusterImpl.java:379) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionImpl.commitTransaction(ClientSessionImpl.java:203) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionImpl.commitTransaction(ClientSessionImpl.java:111) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at org.springframework.data.mongodb.MongoTransactionManager$MongoTransactionObject.commitTransaction(MongoTransactionManager.java:443) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:230) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:194) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	... 38 common frames omitted
+
+2025-04-05T11:31:27.932+02:00 ERROR 41552 --- [ntainer#0-0-C-1] o.s.k.l.FallbackBatchErrorHandler        : Records discarded: test-0@3,test-0@4
+
+org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'public void it.riccardoforzan.transactioninkafkalistener.MyListener.listen(java.util.List<java.lang.String>)' threw exception
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2994) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2473) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchOnMessageWithRecordsOrList(KafkaMessageListenerContainer.java:2440) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$invokeBatchErrorHandler$43(KafkaMessageListenerContainer.java:2485) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.ErrorHandlingUtils.retryBatch(ErrorHandlingUtils.java:143) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FallbackBatchErrorHandler.handleBatch(FallbackBatchErrorHandler.java:152) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.fallback(FailedBatchProcessor.java:195) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.handle(FailedBatchProcessor.java:166) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.FailedBatchProcessor.doHandle(FailedBatchProcessor.java:157) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.DefaultErrorHandler.handleBatch(DefaultErrorHandler.java:176) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchErrorHandler(KafkaMessageListenerContainer.java:2483) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchListener(KafkaMessageListenerContainer.java:2274) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeBatchListener(KafkaMessageListenerContainer.java:2170) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2149) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1528) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1466) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1335) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run$$$capture(CompletableFuture.java:1804) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+	Suppressed: org.springframework.kafka.listener.ListenerExecutionFailedException: Restored Stack Trace
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:489) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:421) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:168) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:60) ~[spring-kafka-3.3.4.jar:3.3.4]
+		at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2459) ~[spring-kafka-3.3.4.jar:3.3.4]
+Caused by: org.springframework.transaction.TransactionSystemException: Could not commit Mongo transaction for session [ClientSessionImpl@288be8b9 id = {"id": {"$binary": {"base64": "IaaZzOUlTcW/HpUKQPICDQ==", "subType": "04"}}}, causallyConsistent = true, txActive = false, txNumber = 12, closed = false, clusterTime = {"clusterTime": {"$timestamp": {"t": 1743845487, "i": 13}}, "signature": {"hash": {"$binary": {"base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=", "subType": "00"}}, "keyId": 0}}].
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:197) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:795) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:758) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:698) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:416) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.5.jar:6.2.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.5.jar:6.2.5]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727) ~[spring-aop-6.2.5.jar:6.2.5]
+	at it.riccardoforzan.transactioninkafkalistener.MyService$$SpringCGLIB$$0.transactionalBulkSave(<generated>) ~[classes/:na]
+	at it.riccardoforzan.transactioninkafkalistener.MyListener.listen(MyListener.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169) ~[spring-messaging-6.2.5.jar:6.2.5]
+	at org.springframework.kafka.listener.adapter.KotlinAwareInvocableHandlerMethod.doInvoke(KotlinAwareInvocableHandlerMethod.java:45) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119) ~[spring-messaging-6.2.5.jar:6.2.5]
+	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:78) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:467) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:421) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:168) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.adapter.BatchMessagingMessageListenerAdapter.onMessage(BatchMessagingMessageListenerAdapter.java:60) ~[spring-kafka-3.3.4.jar:3.3.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeBatchOnMessage(KafkaMessageListenerContainer.java:2459) ~[spring-kafka-3.3.4.jar:3.3.4]
+	... 18 common frames omitted
+Caused by: com.mongodb.MongoCommandException: Command failed with error 251 (NoSuchTransaction): 'Transaction with { txnNumber: 12 } has been aborted.' on server localhost:50859. The full response is {"errorLabels": ["TransientTransactionError"], "ok": 0.0, "errmsg": "Transaction with { txnNumber: 12 } has been aborted.", "code": 251, "codeName": "NoSuchTransaction", "$clusterTime": {"clusterTime": {"$timestamp": {"t": 1743845487, "i": 13}}, "signature": {"hash": {"$binary": {"base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=", "subType": "00"}}, "keyId": 0}}, "operationTime": {"$timestamp": {"t": 1743845487, "i": 13}}}
+	at com.mongodb.internal.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:210) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:520) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceiveInternal(InternalStreamConnection.java:448) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.lambda$sendAndReceive$0(InternalStreamConnection.java:375) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:378) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection.sendAndReceive(UsageTrackingInternalConnection.java:111) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.sendAndReceive(DefaultConnectionPool.java:748) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.CommandProtocolImpl.execute(CommandProtocolImpl.java:68) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServer$DefaultServerProtocolExecutor.execute(DefaultServer.java:208) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.executeProtocol(DefaultServerConnection.java:113) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:82) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:73) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServer$OperationCountTrackingConnection.command(DefaultServer.java:298) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$executeRetryableWrite$10(SyncOperationHelper.java:267) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$withSourceAndConnection$0(SyncOperationHelper.java:131) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:156) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$withSourceAndConnection$1(SyncOperationHelper.java:130) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:156) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSourceAndConnection(SyncOperationHelper.java:129) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$executeRetryableWrite$11(SyncOperationHelper.java:252) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$decorateWriteWithRetries$12(SyncOperationHelper.java:308) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:67) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.executeRetryableWrite(SyncOperationHelper.java:279) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.TransactionOperation.execute(TransactionOperation.java:60) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.CommitTransactionOperation.execute(CommitTransactionOperation.java:69) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.CommitTransactionOperation.execute(CommitTransactionOperation.java:48) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.client.internal.MongoClusterImpl$OperationExecutorImpl.execute(MongoClusterImpl.java:379) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionImpl.commitTransaction(ClientSessionImpl.java:203) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionImpl.commitTransaction(ClientSessionImpl.java:111) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at org.springframework.data.mongodb.MongoTransactionManager$MongoTransactionObject.commitTransaction(MongoTransactionManager.java:443) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:230) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	at org.springframework.data.mongodb.MongoTransactionManager.doCommit(MongoTransactionManager.java:194) ~[spring-data-mongodb-4.4.4.jar:4.4.4]
+	... 38 common frames omitted
+
+2025-04-05T11:31:27.933+02:00 TRACE 41552 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Ack: test-0@4
+2025-04-05T11:31:27.933+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Commit list: {test-0=OffsetAndMetadata{offset=5, leaderEpoch=null, metadata=''}}
+2025-04-05T11:31:27.933+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Committing: {test-0=OffsetAndMetadata{offset=5, leaderEpoch=null, metadata=''}}
+2025-04-05T11:31:32.945+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Received: 0 records
+2025-04-05T11:31:32.947+02:00 DEBUG 41552 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Commit list: {}
+
+org.awaitility.core.ConditionTimeoutException: Assertion condition defined as a Lambda expression in it.riccardoforzan.transactioninkafkalistener.TransactionInKafkaListenerApplicationTests
+Expected size: 2 but was: 1 in:
+[MyDocument[id=67f0f86f3abbd823e4cbb594, value=1]] within 10 seconds.
+
+	at org.awaitility.core.ConditionAwaiter.await(ConditionAwaiter.java:167)
+	at org.awaitility.core.AssertionCondition.await(AssertionCondition.java:119)
+	at org.awaitility.core.AssertionCondition.await(AssertionCondition.java:31)
+	at org.awaitility.core.ConditionFactory.until(ConditionFactory.java:1006)
+	at org.awaitility.core.ConditionFactory.untilAsserted(ConditionFactory.java:790)
+	at it.riccardoforzan.transactioninkafkalistener.TransactionInKafkaListenerApplicationTests.shouldTolerateDuplicates(TransactionInKafkaListenerApplicationTests.java:78)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: java.lang.AssertionError:
+Expected size: 2 but was: 1 in:
+[MyDocument[id=67f0f86f3abbd823e4cbb594, value=1]]
+	at it.riccardoforzan.transactioninkafkalistener.TransactionInKafkaListenerApplicationTests.lambda$shouldTolerateDuplicates$2(TransactionInKafkaListenerApplicationTests.java:78)
+	at org.awaitility.core.AssertionCondition.lambda$new$0(AssertionCondition.java:53)
+	at org.awaitility.core.ConditionAwaiter$ConditionPoller.call(ConditionAwaiter.java:248)
+	at org.awaitility.core.ConditionAwaiter$ConditionPoller.call(ConditionAwaiter.java:235)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at --- Async.Stack.Trace --- (captured by IntelliJ IDEA debugger)
+	at java.base/java.util.concurrent.FutureTask.<init>(FutureTask.java:132)
+	at java.base/java.util.concurrent.AbstractExecutorService.newTaskFor(AbstractExecutorService.java:113)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:144)
+	at java.base/java.util.concurrent.Executors$DelegatedExecutorService.submit(Executors.java:790)
+	at org.awaitility.core.ConditionAwaiter.await(ConditionAwaiter.java:101)
+	at org.awaitility.core.AssertionCondition.await(AssertionCondition.java:119)
+	at org.awaitility.core.AssertionCondition.await(AssertionCondition.java:31)
+	at org.awaitility.core.ConditionFactory.until(ConditionFactory.java:1006)
+	at org.awaitility.core.ConditionFactory.untilAsserted(ConditionFactory.java:790)
+	at it.riccardoforzan.transactioninkafkalistener.TransactionInKafkaListenerApplicationTests.shouldTolerateDuplicates(TransactionInKafkaListenerApplicationTests.java:78)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$8(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+

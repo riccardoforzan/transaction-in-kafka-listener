@@ -1,0 +1,10 @@
+spring:
+  data:
+    mongodb:
+      auto-index-creation: true
+
+logging:
+  level:
+    root: info
+    org.springframework.transaction: trace
+    org.springframework.kafka: trace
