@@ -19,15 +19,19 @@ import java.util.concurrent.TimeUnit;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.awaitility.Awaitility.await;
 
-@SpringBootTest(classes = {
-  MyConfiguration.class,
-  MyListener.class,
-  MyService.class,
-  MyRepository.class,
-  TransactionInKafkaListenerApplicationTests.TestConfig.class
-}, properties = {
-  "spring.kafka.consumer.group-id=test"
-})
+@SpringBootTest(
+  classes = {
+    MyConfiguration.class,
+    MyListener.class,
+    MyService.class,
+    MyRepository.class,
+    TransactionInKafkaListenerApplicationTests.TestConfig.class
+  },
+  properties = {
+    "spring.kafka.consumer.group-id=test",
+    "spring.kafka.producer.batch-size=500"
+  }
+)
 @EnableAutoConfiguration
 @Import(TestcontainersConfiguration.class)
 class TransactionInKafkaListenerApplicationTests {

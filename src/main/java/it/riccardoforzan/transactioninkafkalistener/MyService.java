@@ -24,7 +24,7 @@ class MyService {
     try {
       myRepository.transactionalBulkSave(documents);
     } catch (BulkOperationException e) {
-      log.error(e.getMessage());
+      log.error("BulkOperationException", e);
       Set<String> collect = e
                               .getResult()
                               .getInserts()
@@ -39,8 +39,8 @@ class MyService {
                                                                    .toString()))
                                  .toList();
       log.info("saved {}", valid);
-    } catch (Throwable any){
-      log.error(any.getMessage());
+    } catch (Exception e) {
+      log.error("Exception in MyService", e);
     }
   }
 

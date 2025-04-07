@@ -25,6 +25,10 @@ public class MyListener {
                               .stream()
                               .map(e -> new MyDocument(ObjectId.get(), e))
                               .toList();
-    myService.transactionalBulkSave(list);
+    try {
+      myService.transactionalBulkSave(list);
+    } catch (Exception e) {
+      log.error("Exception in MyListener", e);
+    }
   }
 }
